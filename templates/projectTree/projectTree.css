@@ -1,0 +1,108 @@
+
+li
+{
+    list-style: none;
+}
+
+.treeItemFile
+{
+    float: left;
+}
+
+.treeItemFolder
+{
+    float: left;
+}
+
+.treeItemNoButton
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background-color: #ffffff;
+}
+
+.opened
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background: url('images/minus.gif') no-repeat;
+}
+
+.closed
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background: url('images/plus.gif') no-repeat;
+}
+
+
+.treeItemOpenedFolder
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background: url('images/folder.gif') no-repeat;
+    margin-right: 6px;
+}
+
+.treeItemClosedFolder
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background: url('images/folder-closed.gif') no-repeat;
+    margin-right: 6px;
+}
+
+.treeItemFileIcon
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background: url('images/file.gif') no-repeat;
+    margin-right: 6px;
+}
+
+.treeItemFileIcon_html
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background: url('images/html.png') no-repeat;
+    margin-right: 6px;
+}
+
+.treeItemFileIcon_js
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background: url('images/js.png') no-repeat;
+    margin-right: 6px;
+}
+
+.treeItemFileIcon_css
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background: url('images/css.png') no-repeat;
+    margin-right: 6px;
+}
+
+.treeItemFileIcon_python
+{
+    float: left;
+    width: 15px;
+    height: 20px;
+    background: url('images/python.png') no-repeat;
+    margin-right: 6px;
+}
+
+.treeItemName
+{
+    float: left;
+}

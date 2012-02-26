@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html>
+<html>
+<head>
+    <title>Cloud10 - IDE</title>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}jquery-1.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/lib/codemirror.css">
+    <script src="{{ STATIC_URL }}editor/lib/codemirror.js"></script>
+    <script src="{{ STATIC_URL }}editor/lib/util/simple-hint.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/lib/util/simple-hint.css">
+    <script src="{{ STATIC_URL }}editor/lib/util/javascript-hint.js"></script>
+
+    <script src="{{ STATIC_URL }}editor/mode/python/python.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/doc/docs.css">
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/theme/night.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/theme/cobalt.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/theme/eclipse.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/theme/elegant.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/theme/monokai.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/theme/neat.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}editor/theme/rubyblue.css">
+
+    <style type="text/css">.CodeMirror {border: 1px solid #eee;}</style>
+
+
+    <script src="{{ STATIC_URL }}editor_factor.js"></script>
+    <script src="{{ STATIC_URL }}ide.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}projectTree/projectTree.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}ide.css" />
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}colorbox/colorbox.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}colorbox/jquery.colorbox.js"></script>
+
+</head>
+<body>
+
+<div id="header">
+    <div id="cloud10">Cloud 10!</div>
+    <div id="slogan">Code Everywhere...</div>
+</div>
+
+<div id="toolbarDivID">
+
+    <div id="optionsMenu">
+        Theme:<select id="selectThemeID" onchange="changeTheme()">
+            <option>default</option>
+            <option selected="">night</option>
+            <option>cobalt</option>
+            <option>eclipse</option>
+            <option>elegant</option>
+            <option>monokai</option>
+            <option>neat</option>
+            <option>rubyblue</option>
+        </select>
+    </div>
+</div>
+
+<div id="controlsDivID">
+    <div id="openProjectButton" class="toolBarButton rounded-corners">Open</div>
+
+    <div id="runButton" class="toolBarButton rounded-corners">Run</div>
+
+    <div id="saveButton" class="toolBarButton rounded-corners">Save</div>
+    <div id="addFileButton" class="toolBarButton rounded-corners">Add File</div>
+
+    <div id="open" class="toolBarButton rounded-corners">
+        <a class='iframe_run' href="http://www.google.com">View Run</a>
+    </div>
+
+    <div id="renameButton" class="toolBarButton rounded-corners">
+        <!--<a class='inline_rename' href="#inline_rename_box">Rename</a>-->
+        <a id="koko" href="#inline_rename_box">Rename</a>
+    </div>
+
+    <div id="deleteButton" class="toolBarButton rounded-corners" onclick="deleteFile()">Delete</div>
+
+    <div> </div>
+
+</div>
+
+<div id="projectTreeDivID">
+    <div id="projectTreeButtons">
+        Project Explorer
+        <div class="miniButton rounded-corners">p</div> <!--Pin-->
+        <div class="miniButton rounded-corners">x</div> <!--Close-->
+    </div>
+
+    <div id="projectTreeView">
+    </div>
+
+</div>
+<div id="codeAreaDivID">
+
+    <div id="taps">
+        <div id="tapsbody">
+        </div>
+
+        <div id="tapsfooter" />
+    </div>
+
+    <div id="editors"> <!--here's where editors should be displayed-->
+    </div>
+</div>
+
+<!-- Rename -->
+<div style='display:none'>
+    <div id='inline_rename_box' style='padding:10px; background:#fff;'>
+        <input id="newname" type="text" />
+        <button id="cancelRename" onclick="closeRenameForm()">Cancel</button>
+        <button id="confirmRename" onclick="renameFile()">Rename</button>
+    </div>
+</div>
+
+</body>
+</html>

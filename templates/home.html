@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+q
+<html>
+<head>
+    <title>Home</title>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}compiler.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css" />
+
+</head>
+
+<body>
+<!-- HEADER -->
+<div id="headerID" class="rounded-corners gradiant">
+    <div id="titleID" class="gradient"> Cloud 10 </div>
+    <div id="sloganID"> and so i code! </div>
+</div>
+
+<!-- MAIN MENU -->
+<div id="mainMenuID" class="rounded-corners inner-shadow gradiant">
+    <div class="buttons">
+        <ul>
+            <li><a href="/home" class="main_menu_item rounded-corners">HOME</a></li>
+            <li><a href="/feedback" class="main_menu_item rounded-corners">FEEDBACK</a></li>
+            <li><a href="/about" class="main_menu_item rounded-corners">ABOUT</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- CONTROLLERS -->
+<div id="controllersID" class="rounded-corners inner-shadow">
+    <div class="controls">
+        <div id="notificationsID" class="notifications rounded-corners">Notifications</div>
+        <div onclick="compileCode()" class="controls_menu_item rounded-corners">COMPILE</div>
+    </div>
+</div>
+
+<!-- BODY -->
+<div id="bodyID" class="rounded-corners inner-shadow">
+    <div id="code_result_area_ID">
+
+        <div id="codeAreaID" class="rounded-corners">
+            <textarea id="code"  rows="25" cols="50">
+from django import render_to_response
+def run(request):
+    render_to_response(run.html)
+            </textarea>
+        </div>
+
+        <div id="resultsAreaID" class="rounded-corners">
+            <textarea id="results" rows="25" cols="50"></textarea>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div id="footerID" class="gradiant" style="text-decoration: none;">
+    <p> copyrights @ <a style="color: black;" href="http://cloudide.wordpress.com/">Cloud Geeks</a> </p>
+</div>
+
+
+</body>
+
+</html>
